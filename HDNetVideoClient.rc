@@ -1,0 +1,871 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\HDNetVideoClient.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\HDNetVideoClient.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_HDNETVIDEOCLIENT_DIALOG DIALOGEX 0, 0, 582, 452
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "HDNetVideoClient"
+FONT 10, "宋体"
+BEGIN
+    LTEXT           "BACK",IDC_LBL_TOOL_BAR,3,26,576,20
+    PUSHBUTTON      "Monitor",IDC_BTN_MONITOR,3,2,65,21
+    PUSHBUTTON      "Config",IDC_BTN_CONFIG,68,2,65,21
+    PUSHBUTTON      "Log",IDC_BTN_LOG,133,2,65,21
+    PUSHBUTTON      "Playback",IDC_BTN_PLAYBACK,203,2,65,21,NOT WS_VISIBLE
+    PUSHBUTTON      "Map",IDC_BTN_MAP,268,2,65,21,NOT WS_VISIBLE
+    PUSHBUTTON      "Help",IDC_BTN_HELP,333,2,65,21,NOT WS_VISIBLE
+    LTEXT           "V1.0.0.1234",IDC_STATIC_VERSION,402,12,49,8
+    LTEXT           "User: admin",IDC_STATIC_USER,499,12,80,8
+END
+
+IDD_LOGIN DIALOG DISCARDABLE  0, 0, 171, 130
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "登录"
+FONT 10, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "Login",IDOK,75,113,50,14
+    PUSHBUTTON      "Exit",IDCANCEL,130,113,38,14
+    LTEXT           "User:",IDC_STATIC_USER,23,15,37,8
+    LTEXT           "Password:",IDC_STATIC_PASSWORD,23,39,37,8
+    COMBOBOX        IDC_COMBO_USER,61,13,95,30,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_PWD,61,36,95,14,ES_PASSWORD | ES_AUTOHSCROLL
+    PUSHBUTTON      "Change Password",IDC_BTN_MODIFY,3,113,66,14
+    LTEXT           "Test:",IDC_STATIC_LANGUAGE,23,61,35,8
+    CONTROL         "Auto login",IDC_CHECK_LOGIN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,60,77,56,10
+    CONTROL         "Chinese",IDC_RADIO_CN,"Button",BS_AUTORADIOBUTTON,60,60,
+                    44,10
+    CONTROL         "English",IDC_RADIO_EN,"Button",BS_AUTORADIOBUTTON,108,
+                    60,44,10
+    CONTROL         "",IDC_STATIC_INFO,"Static",SS_SIMPLE | WS_GROUP,22,97,
+                    140,8
+END
+
+IDD_MODI_PWD DIALOG DISCARDABLE  0, 0, 169, 100
+STYLE WS_CHILD
+FONT 10, "宋体"
+BEGIN
+    LTEXT           "Old password:",IDC_STATIC_OLD,11,17,61,8
+    EDITTEXT        IDC_EDIT_OLD,74,14,83,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "New password:",IDC_STATIC_NEW,11,38,62,8
+    EDITTEXT        IDC_EDIT_NEW,74,35,83,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "New password:",IDC_STATIC_NEW2,11,59,62,8
+    EDITTEXT        IDC_EDIT_NEW2,74,56,83,14,ES_PASSWORD | ES_AUTOHSCROLL
+    PUSHBUTTON      "OK",IDC_BTN_OK,74,77,50,14
+    GROUPBOX        "",IDC_STATIC,3,3,163,94
+END
+
+IDD_MODULE_CONFIG DIALOG DISCARDABLE  0, 0, 337, 264
+STYLE WS_CHILD
+FONT 10, "宋体"
+BEGIN
+    PUSHBUTTON      "Device Config",IDC_BTN_CONFIG_DEVI,3,3,54,21
+    PUSHBUTTON      "Local Config",IDC_BTN_CONFIG_LOCAL,3,30,54,21
+    PUSHBUTTON      "User Config",IDC_BTN_CONFIG_USER,3,58,54,21
+END
+
+IDD_MODULE_MONITOR DIALOG DISCARDABLE  0, 0, 457, 319
+STYLE WS_CHILD
+FONT 10, "宋体"
+BEGIN
+END
+
+IDD_MML_DEVICES DIALOG DISCARDABLE  0, 0, 116, 264
+STYLE WS_CHILD
+FONT 10, "宋体"
+BEGIN
+    PUSHBUTTON      "List",IDC_BTN_LIST,1,1,39,13
+    PUSHBUTTON      "Group",IDC_BTN_GROUP,40,1,39,13
+END
+
+IDD_MMLD_GROUP DIALOG DISCARDABLE  0, 0, 116, 182
+STYLE WS_CHILD
+FONT 10, "宋体"
+BEGIN
+    CONTROL         "Tree1",IDC_TREE_DEVICE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | WS_BORDER | WS_TABSTOP,
+                    3,3,110,162
+END
+
+IDD_MMLD_TREE DIALOG DISCARDABLE  0, 0, 116, 264
+STYLE WS_CHILD
+FONT 10, "宋体"
+BEGIN
+    CONTROL         "Tree1",IDC_TREE_DEVICE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | WS_BORDER | WS_TABSTOP,
+                    3,3,93,153
+END
+
+IDD_MM_LEFT DIALOG DISCARDABLE  0, 0, 129, 185
+STYLE WS_CHILD
+FONT 10, "宋体"
+BEGIN
+END
+
+IDD_MML_OPERATE DIALOG DISCARDABLE  0, 0, 116, 163
+STYLE WS_CHILD
+FONT 10, "宋体"
+BEGIN
+    PUSHBUTTON      "PTZ",IDC_BTN_PTZ,1,1,22,13
+    PUSHBUTTON      "Pre",IDC_BTN_PRESET,23,1,22,13
+    PUSHBUTTON      "Cru",IDC_BTN_CRUISE,45,1,22,13
+    PUSHBUTTON      "Vid",IDC_BTN_VPARAM,67,1,22,13
+END
+
+IDD_MMLO_CRUISE DIALOG DISCARDABLE  0, 0, 124, 127
+STYLE WS_CHILD
+FONT 10, "宋体"
+BEGIN
+    PUSHBUTTON      "Stop",IDC_BTN_STOP_CRUI,18,107,16,14
+    PUSHBUTTON      "Start",IDC_BTN_START,1,107,16,14
+    CONTROL         "List1",IDC_LIST_CRUISE,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,1,3,123,102
+    PUSHBUTTON      "Set",IDC_BTN_SET_CRUISE,36,107,18,14
+END
+
+IDD_MMLO_PRESET DIALOG DISCARDABLE  0, 0, 124, 132
+STYLE WS_CHILD
+FONT 10, "宋体"
+BEGIN
+    PUSHBUTTON      "Set",IDC_BTN_PRESET_SET,18,107,16,14
+    PUSHBUTTON      "Call",IDC_BTN_PRESET_CALL,1,107,16,14
+    CONTROL         "List1",IDC_LIST_PRESET,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | WS_BORDER | WS_TABSTOP,1,3,123,102
+    PUSHBUTTON      "Del",IDC_BTN_PRESET_DEL,36,107,16,14
+END
+
+IDD_MMLO_PTZ DIALOG DISCARDABLE  0, 0, 127, 120
+STYLE WS_CHILD
+FONT 10, "宋体"
+BEGIN
+    GROUPBOX        "",IDC_STATIC,1,0,123,75
+    PUSHBUTTON      "↖",IDC_BTN_LEFTUP,3,6,21,20
+    PUSHBUTTON      "↑",IDC_BTN_UP,25,6,20,20
+    PUSHBUTTON      "↗",IDC_BTN_UPRIGHT,47,6,21,20
+    PUSHBUTTON      "←",IDC_BTN_LEFT,3,28,21,20
+    PUSHBUTTON      "1",IDC_BTN_LEFTRIGHT,25,28,20,20
+    PUSHBUTTON      "→",IDC_BTN_RIGHT,47,28,21,20
+    PUSHBUTTON      "↙",IDC_BTN_LEFTDOWN,3,50,21,20
+    PUSHBUTTON      "↓",IDC_BTN_DOWN,25,50,20,20
+    PUSHBUTTON      "↘",IDC_BTN_RIGHTDOWN,47,50,21,20
+    PUSHBUTTON      "Z1",IDC_BTN_ZOOM1,70,6,23,20
+    PUSHBUTTON      "Z2",IDC_BTN_ZOOM2,96,6,22,20
+    PUSHBUTTON      "F1",IDC_BTN_FOCAL1,70,28,23,20
+    PUSHBUTTON      "F2",IDC_BTN_FOCAL2,96,28,22,20
+    PUSHBUTTON      "A1",IDC_BTN_APERT1,70,50,22,20
+    PUSHBUTTON      "A2",IDC_BTN_APERT2,96,50,22,20
+    CONTROL         "Slider1",IDC_SLIDER_PTZ,"msctls_trackbar32",
+                    TBS_AUTOTICKS | WS_TABSTOP,1,80,110,11
+    PUSHBUTTON      "3D",IDC_BTN_3D,3,94,37,14
+    PUSHBUTTON      "※",IDC_BTN_LIGHT,42,94,38,14
+    PUSHBUTTON      "♂",IDC_BTN_WIPER,82,94,35,14
+    LTEXT           "1",IDC_STATIC_VALUE,112,81,9,8
+END
+
+IDD_MMLO_VIDEO_PARAM DIALOG DISCARDABLE  0, 0, 124, 119
+STYLE WS_CHILD
+FONT 10, "宋体"
+BEGIN
+    PUSHBUTTON      "default",IDC_BTN_DEFAULT,17,99,91,17
+    CONTROL         "Slider1",IDC_SLIDER_BRIGHT,"msctls_trackbar32",
+                    TBS_AUTOTICKS | WS_TABSTOP,18,8,85,11
+    CONTROL         "Slider1",IDC_SLIDER_CONTRAST,"msctls_trackbar32",
+                    TBS_AUTOTICKS | WS_TABSTOP,18,23,85,11
+    CONTROL         "Slider1",IDC_SLIDER_SATURAT,"msctls_trackbar32",
+                    TBS_AUTOTICKS | WS_TABSTOP,18,38,85,11
+    CONTROL         "Slider1",IDC_SLIDER_SHARP,"msctls_trackbar32",
+                    TBS_AUTOTICKS | WS_TABSTOP,18,54,85,11
+    CONTROL         "Slider1",IDC_SLIDER_SOUND,"msctls_trackbar32",
+                    TBS_AUTOTICKS | WS_TABSTOP,18,70,85,11
+    LTEXT           "1",IDC_STATIC_BRIGHT,105,9,14,8
+    LTEXT           "1",IDC_STATIC_CONTRAST,105,24,14,8
+    LTEXT           "1",IDC_STATIC_SATURAT,105,39,14,8
+    LTEXT           "1",IDC_STATIC_SHARP,105,55,14,8
+    LTEXT           "1",IDC_STATIC_SOUND,105,71,14,8
+    LTEXT           "back",IDC_STATIC_BACK,2,7,17,77
+END
+
+IDD_MM_RIGHT DIALOG DISCARDABLE  0, 0, 329, 295
+STYLE WS_CHILD
+FONT 10, "宋体"
+BEGIN
+END
+
+IDD_MMR_LIST DIALOG DISCARDABLE  0, 0, 329, 63
+STYLE WS_CHILD | WS_BORDER
+FONT 10, "宋体"
+BEGIN
+    CONTROL         "List1",IDC_LIST_ALARM,"SysListView32",WS_BORDER | 
+                    WS_TABSTOP,0,0,329,60
+END
+
+IDD_MMR_TOOL DIALOG DISCARDABLE  0, 0, 329, 15
+STYLE WS_CHILD
+FONT 10, "宋体"
+BEGIN
+    PUSHBUTTON      "1",IDC_BTN_PANE1,40,1,11,11
+    PUSHBUTTON      "4",IDC_BTN_PANE4,52,1,11,11
+    PUSHBUTTON      "6",IDC_BTN_PANE6,64,1,11,11
+    PUSHBUTTON      "9",IDC_BTN_PANE9,76,1,11,11
+    PUSHBUTTON      "10",IDC_BTN_PANE10,88,1,11,11
+    PUSHBUTTON      "13",IDC_BTN_PANE13,100,1,11,11
+    PUSHBUTTON      "16",IDC_BTN_PANE16,112,1,11,11
+    PUSHBUTTON      "36",IDC_BTN_PANE36,124,1,11,11
+    PUSHBUTTON      "64",IDC_BTN_PANE64,136,1,11,11
+    PUSHBUTTON      "F",IDC_BTN_FULLSCREEN,0,1,11,11
+    PUSHBUTTON      "P",IDC_BTN_PREVI,14,1,11,11
+    PUSHBUTTON      "N",IDC_BTN_NEXT,25,1,11,11
+END
+
+IDD_MC_DEVICE DIALOG DISCARDABLE  0, 0, 368, 263
+STYLE WS_CHILD
+FONT 10, "宋体"
+BEGIN
+    LTEXT           "Right-click and select to add Area or Device",
+                    IDC_STATIC_INFO,3,3,230,8
+    CONTROL         "Tree1",IDC_TREE_DEVICE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | WS_BORDER | WS_TABSTOP,
+                    3,18,167,242
+END
+
+IDD_MC_USER DIALOG DISCARDABLE  0, 0, 368, 263
+STYLE WS_CHILD
+FONT 10, "宋体"
+BEGIN
+    PUSHBUTTON      "添加用户",IDC_BTN_ADD_USER,3,3,50,14
+    PUSHBUTTON      "修改用户",IDC_BTN_MODI_USER,59,3,50,14
+    PUSHBUTTON      "删除用户",IDC_BTN_DEL_USER,116,3,50,14
+    CONTROL         "List1",IDC_LIST1,"SysListView32",WS_BORDER | WS_TABSTOP,
+                    3,22,162,238
+END
+
+IDD_MC_LOCAL DIALOG DISCARDABLE  0, 0, 368, 263
+STYLE WS_CHILD
+FONT 10, "宋体"
+BEGIN
+    PUSHBUTTON      "浏览",IDC_BTN_ADD_USER,130,215,50,14
+    PUSHBUTTON      "浏览",IDC_BTN_MODI_USER,193,215,50,14
+    PUSHBUTTON      "保存",IDC_BTN_DEL_USER,255,215,50,14
+END
+
+IDD_MCD_ADD_AREA DIALOG DISCARDABLE  0, 0, 187, 89
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add Area"
+FONT 10, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,63,72,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,123,72,50,14
+    GROUPBOX        "Area infomation",IDC_STATIC_TITLE,3,3,181,62
+    LTEXT           "Area Name:",IDC_STATIC_NAME,8,24,56,8
+    EDITTEXT        IDC_EDIT_NAME,64,21,109,14,ES_AUTOHSCROLL
+    LTEXT           "Up Area Name:",IDC_STATIC_UPNAME,8,45,56,8
+    EDITTEXT        IDC_EDIT_UP_NAME,64,42,109,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+END
+
+IDD_MCD_ADD_ENCODER DIALOG DISCARDABLE  0, 0, 315, 169
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add Encoder"
+FONT 10, "宋体"
+BEGIN
+    EDITTEXT        IDC_EDIT_NAME,64,19,86,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO_MODE,221,19,83,30,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "IPAddress1",IDC_IPADDRESS_DEVICE,"SysIPAddress32",
+                    WS_TABSTOP,64,38,87,15
+    EDITTEXT        IDC_EDIT_PORT,221,38,82,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_USER,64,58,86,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PWD,221,58,84,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CHANNEL,64,78,86,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_AREA,221,78,84,14,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "IPAddress1",IDC_IPADDRESS_DNS,"SysIPAddress32",
+                    WS_TABSTOP,64,98,87,15
+    CONTROL         "IPAddress1",IDC_IPADDRESS_MULTICAST,"SysIPAddress32",
+                    WS_TABSTOP,220,99,85,15
+    EDITTEXT        IDC_EDIT_ID,64,120,241,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Show online device",IDC_SEARCH,3,152,81,14
+    DEFPUSHBUTTON   "OK",IDOK,202,152,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,262,152,50,14
+    GROUPBOX        "Device infomation",IDC_STATIC_TITLE,3,3,309,140
+    LTEXT           "Device Name:",IDC_STATIC_NAME,8,22,56,8
+    LTEXT           "Device IP:",IDC_STATIC_IP,8,41,56,8
+    LTEXT           "Port:",IDC_STATIC_PORT,165,41,46,8
+    LTEXT           "Address Mode:",IDC_STATIC_IPMODE,165,22,55,8
+    LTEXT           "User:",IDC_STATIC_USER,9,61,46,8
+    LTEXT           "Password:",IDC_STATIC_PWD,166,61,50,8
+    LTEXT           "Channel:",IDC_STATIC_CHANNEL,9,82,46,8
+    LTEXT           "Area:",IDC_STATIC_AREA,166,82,46,8
+    LTEXT           "ID Number:",IDC_STATIC_ID,9,123,46,8
+    LTEXT           "DNS:",IDC_STATIC_DNS,10,102,46,8
+    LTEXT           "Multicast:",IDC_STATIC_MULTICAST,166,102,46,8
+END
+
+IDD_MCD_MODIFY_CAMERA DIALOG DISCARDABLE  0, 0, 259, 113
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Modify Channel"
+FONT 10, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,62,96,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,206,96,50,14
+    GROUPBOX        "Channel information",IDC_TITLE,3,3,253,87
+    LTEXT           "Channel Name:",IDC_STATIC_NAME,8,24,53,8
+    EDITTEXT        IDC_EDIT_NAME,62,21,79,14,ES_AUTOHSCROLL
+    LTEXT           "Channel ID:",IDC_STATIC_NO,150,24,45,8
+    EDITTEXT        IDC_EDIT_NO,201,21,48,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Device Name:",IDC_STATIC_DEVI_NAME,8,46,49,8
+    EDITTEXT        IDC_EDIT_DEVI_NAME,62,43,79,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "IP Address:",IDC_STATIC_DEVI_IP,8,67,45,8
+    EDITTEXT        IDC_EDIT_DEVI_IP,62,64,186,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Stream Type:",IDC_STATIC_STREAM,150,46,49,8
+    COMBOBOX        IDC_COMBO_STREAM,201,44,48,50,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_MML_PLAY DIALOG DISCARDABLE  0, 0, 127, 59
+STYLE WS_CHILD
+FONT 10, "宋体"
+BEGIN
+    PUSHBUTTON      "Play",IDC_BTN_PLAY,4,8,21,20
+    PUSHBUTTON      "Record",IDC_BTN_RECORD,97,8,21,20
+    PUSHBUTTON      "Capture",IDC_BTN_CAPTURE,74,8,21,20
+    PUSHBUTTON      "Sound",IDC_BTN_SOUND,74,32,21,20
+    PUSHBUTTON      "Talk",IDC_BTN_TALK,97,32,21,20
+    PUSHBUTTON      "Stop",IDC_BTN_STOP,48,8,21,20
+    PUSHBUTTON      "Stop All",IDC_BTN_STOPALL,26,8,21,20
+    GROUPBOX        "",IDC_STATIC,1,0,123,56
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "HDNetVideoClient Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "HDNetVideoClient\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2011\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "HDNetVideoClient.EXE\0"
+            VALUE "ProductName", "HDNetVideoClient 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_HDNETVIDEOCLIENT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 579
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 449
+    END
+
+    IDD_LOGIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 168
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 127
+    END
+
+    IDD_MODI_PWD, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 166
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 97
+    END
+
+    IDD_MODULE_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 334
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 261
+    END
+
+    IDD_MODULE_MONITOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 454
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 316
+    END
+
+    IDD_MML_DEVICES, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 113
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 261
+    END
+
+    IDD_MMLD_GROUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 113
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 179
+    END
+
+    IDD_MMLD_TREE, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 113
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 261
+    END
+
+    IDD_MM_LEFT, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 126
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 182
+    END
+
+    IDD_MML_OPERATE, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 113
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 160
+    END
+
+    IDD_MMLO_CRUISE, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 124
+    END
+
+    IDD_MMLO_PRESET, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 129
+    END
+
+    IDD_MMLO_PTZ, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 124
+        BOTTOMMARGIN, 117
+    END
+
+    IDD_MMLO_VIDEO_PARAM, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 116
+    END
+
+    IDD_MM_RIGHT, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 326
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 292
+    END
+
+    IDD_MMR_LIST, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 60
+    END
+
+    IDD_MMR_TOOL, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 326
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 12
+    END
+
+    IDD_MC_DEVICE, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 365
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 260
+    END
+
+    IDD_MC_USER, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 365
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 260
+    END
+
+    IDD_MC_LOCAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 365
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 260
+    END
+
+    IDD_MCD_ADD_AREA, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 184
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 86
+    END
+
+    IDD_MCD_ADD_ENCODER, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 312
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 166
+    END
+
+    IDD_MCD_MODIFY_CAMERA, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 256
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 110
+    END
+
+    IDD_MML_PLAY, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 124
+        BOTTOMMARGIN, 56
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_CONF_DEVI MENU DISCARDABLE 
+BEGIN
+    POPUP "设备配置"
+    BEGIN
+        MENUITEM "Add Area",                    IDM_CD_ADD_AREA
+        MENUITEM "Add Device",                  IDM_CD_ADD_DEVICE
+        MENUITEM "Delete Node",                 IDM_CD_DEL_NODE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_MAIN_TOP_BACK       BITMAP  DISCARDABLE     "res\\top_bar_back.bmp"
+IDB_BTN_MONITOR         BITMAP  DISCARDABLE     "res\\btnMonitor1.bmp"
+IDB_BTN_MONITOR2        BITMAP  DISCARDABLE     "res\\btnMonitor2.bmp"
+IDB_BTN_CONFIG1         BITMAP  DISCARDABLE     "res\\btnConfig1.bmp"
+IDB_BTN_CONFIG2         BITMAP  DISCARDABLE     "res\\btnConfig2.bmp"
+IDB_BTN_LOG3            BITMAP  DISCARDABLE     "res\\btnLog3.bmp"
+IDB_BTN_LOG1            BITMAP  DISCARDABLE     "res\\btnLog1.bmp"
+IDB_BTN_LOG2            BITMAP  DISCARDABLE     "res\\btnLog2.bmp"
+IDB_BTN_CONFIG3         BITMAP  DISCARDABLE     "res\\btnConfig3.bmp"
+IDB_BTN_MONITOR3        BITMAP  DISCARDABLE     "res\\btnMonitor3.bmp"
+IDB_TAB_BACK11          BITMAP  DISCARDABLE     "res\\tabBack11.bmp"
+IDB_TAB_BACK12          BITMAP  DISCARDABLE     "res\\tabBack12.bmp"
+IDB_BTN_MONITOR3_EN     BITMAP  DISCARDABLE     "res\\btnMonitorEn3.bmp"
+IDB_BTN_CONFIG1_EN      BITMAP  DISCARDABLE     "res\\btnConfigEn1.bmp"
+IDB_BTN_CONFIG2_EN      BITMAP  DISCARDABLE     "res\\btnConfigEn2.bmp"
+IDB_BTN_CONFIG3_EN      BITMAP  DISCARDABLE     "res\\btnConfigEn3.bmp"
+IDB_BTN_LOG1_EN         BITMAP  DISCARDABLE     "res\\btnLogEn1.bmp"
+IDB_BTN_LOG2_EN         BITMAP  DISCARDABLE     "res\\btnLogEn2.bmp"
+IDB_BTN_LOG3_EN         BITMAP  DISCARDABLE     "res\\btnLogEn3.bmp"
+IDB_BTN_MONITOR1_EN     BITMAP  DISCARDABLE     "res\\btnMonitorEn1.bmp"
+IDB_BTN_MONITOR2_EN     BITMAP  DISCARDABLE     "res\\btnMonitorEn2.bmp"
+IDB_TAB_BACK22          BITMAP  DISCARDABLE     "res\\tabBack22.bmp"
+IDB_TAB_BACK21          BITMAP  DISCARDABLE     "res\\tabBack21.bmp"
+IDB_MWIN_TOP_BACK       BITMAP  DISCARDABLE     "res\\MWinTopBack.bmp"
+IDB_BTN_01PANE          BITMAP  DISCARDABLE     "res\\01PANE.bmp"
+IDB_BTN_01PANE_D        BITMAP  DISCARDABLE     "res\\01PANE_D.bmp"
+IDB_BTN_01PANE_O        BITMAP  DISCARDABLE     "res\\01PANE_O.bmp"
+IDB_BTN_04PANE          BITMAP  DISCARDABLE     "res\\04PANE.bmp"
+IDB_BTN_04PANE_D        BITMAP  DISCARDABLE     "res\\04PANE_D.bmp"
+IDB_BTN_04PANE_O        BITMAP  DISCARDABLE     "res\\04PANE_O.bmp"
+IDB_BTN_06PANE          BITMAP  DISCARDABLE     "res\\06PANE.bmp"
+IDB_BTN_06PANE_D        BITMAP  DISCARDABLE     "res\\06PANE_D.bmp"
+IDB_BTN_06PANE_O        BITMAP  DISCARDABLE     "res\\06PANE_O.bmp"
+IDB_BTN_09PANE          BITMAP  DISCARDABLE     "res\\09PANE.bmp"
+IDB_BTN_09PANE_D        BITMAP  DISCARDABLE     "res\\09PANE_D.bmp"
+IDB_BTN_09PANE_O        BITMAP  DISCARDABLE     "res\\09PANE_O.bmp"
+IDB_BTN_10PANE          BITMAP  DISCARDABLE     "res\\10PANE.bmp"
+IDB_BTN_10PANE_D        BITMAP  DISCARDABLE     "res\\10PANE_D.bmp"
+IDB_BTN_10PANE_O        BITMAP  DISCARDABLE     "res\\10PANE_O.bmp"
+IDB_BTN_13PANE          BITMAP  DISCARDABLE     "res\\13PANE.bmp"
+IDB_BTN_13PANE_D        BITMAP  DISCARDABLE     "res\\13PANE_D.bmp"
+IDB_BTN_13PANE_O        BITMAP  DISCARDABLE     "res\\13PANE_O.bmp"
+IDB_BTN_64PANE_O        BITMAP  DISCARDABLE     "res\\64PANE_O.bmp"
+IDB_BTN_16PANE          BITMAP  DISCARDABLE     "res\\16PANE.bmp"
+IDB_BTN_16PANE_D        BITMAP  DISCARDABLE     "res\\16PANE_D.bmp"
+IDB_BTN_16PANE_O        BITMAP  DISCARDABLE     "res\\16PANE_O.bmp"
+IDB_BTN_36PANE          BITMAP  DISCARDABLE     "res\\36PANE.bmp"
+IDB_BTN_36PANE_D        BITMAP  DISCARDABLE     "res\\36PANE_D.bmp"
+IDB_BTN_36PANE_O        BITMAP  DISCARDABLE     "res\\36PANE_O.bmp"
+IDB_BTN_64PANE          BITMAP  DISCARDABLE     "res\\64PANE.bmp"
+IDB_BTN_64PANE_D        BITMAP  DISCARDABLE     "res\\64PANE_D.bmp"
+IDB_BTN_FULL_D          BITMAP  DISCARDABLE     "res\\Fullscreen_D.bmp"
+IDB_BTN_FULL            BITMAP  DISCARDABLE     "res\\Fullscreen.bmp"
+IDB_BTN_FULL_O          BITMAP  DISCARDABLE     "res\\Fullscreen_O.bmp"
+IDB_BTN_PREVI_D         BITMAP  DISCARDABLE     "res\\Previous_D.bmp"
+IDB_BTN_PREVI           BITMAP  DISCARDABLE     "res\\Previous.bmp"
+IDB_BTN_PREVI_O         BITMAP  DISCARDABLE     "res\\Previous_O.bmp"
+IDB_BTN_NEXT_D          BITMAP  DISCARDABLE     "res\\Next_D.bmp"
+IDB_BTN_NEXT            BITMAP  DISCARDABLE     "res\\Next.bmp"
+IDB_BTN_NEXT_O          BITMAP  DISCARDABLE     "res\\Next_O.bmp"
+IDB_BTN_3DPOS1          BITMAP  DISCARDABLE     "res\\3DPos1.bmp"
+IDB_BTN_3DPOS2          BITMAP  DISCARDABLE     "res\\3DPos2.bmp"
+IDB_BTN_3DPOS3          BITMAP  DISCARDABLE     "res\\3DPos3.bmp"
+IDB_BTN_AS1             BITMAP  DISCARDABLE     "res\\ApertureSmall1.bmp"
+IDB_BTN_AS2             BITMAP  DISCARDABLE     "res\\ApertureSmall2.bmp"
+IDB_BTN_AS3             BITMAP  DISCARDABLE     "res\\ApertureSmall3.bmp"
+IDB_BTN_DOWN1           BITMAP  DISCARDABLE     "res\\Down1.bmp"
+IDB_BTN_DOWN2           BITMAP  DISCARDABLE     "res\\Down2.bmp"
+IDB_BTN_DOWN3           BITMAP  DISCARDABLE     "res\\Down3.bmp"
+IDB_BTN_DOWNLEFT1       BITMAP  DISCARDABLE     "res\\DownLeft1.bmp"
+IDB_BTN_DOWNLEFT2       BITMAP  DISCARDABLE     "res\\DownLeft2.bmp"
+IDB_BTN_DOWNLEFT3       BITMAP  DISCARDABLE     "res\\DownLeft3.bmp"
+IDB_BTN_FOCALB1         BITMAP  DISCARDABLE     "res\\FocalBack1.bmp"
+IDB_BTN_FOCALB2         BITMAP  DISCARDABLE     "res\\FocalBack2.bmp"
+IDB_BTN_FOCALB3         BITMAP  DISCARDABLE     "res\\FocalBack3.bmp"
+IDB_BTN_FOCALF1         BITMAP  DISCARDABLE     "res\\FocalFront1.bmp"
+IDB_BTN_FOCALF2         BITMAP  DISCARDABLE     "res\\FocalFront2.bmp"
+IDB_BTN_FOCALF3         BITMAP  DISCARDABLE     "res\\FocalFront3.bmp"
+IDB_BTN_LEFT1           BITMAP  DISCARDABLE     "res\\Left1.bmp"
+IDB_BTN_LEFT2           BITMAP  DISCARDABLE     "res\\Left2.bmp"
+IDB_BTN_LEFT3           BITMAP  DISCARDABLE     "res\\Left3.bmp"
+IDB_BTN_LEFTR1          BITMAP  DISCARDABLE     "res\\LeftRight1.bmp"
+IDB_BTN_LEFTR2          BITMAP  DISCARDABLE     "res\\LeftRight2.bmp"
+IDB_BTN_LEFTR3          BITMAP  DISCARDABLE     "res\\LeftRight3.bmp"
+IDB_BTN_LEFTU1          BITMAP  DISCARDABLE     "res\\LeftUP1.bmp"
+IDB_BTN_LEFTU2          BITMAP  DISCARDABLE     "res\\LeftUP2.bmp"
+IDB_BTN_LEFTU3          BITMAP  DISCARDABLE     "res\\LeftUP3.bmp"
+IDB_BTN_LIGHT1          BITMAP  DISCARDABLE     "res\\Light1.bmp"
+IDB_BTN_LIGHT2          BITMAP  DISCARDABLE     "res\\Light2.bmp"
+IDB_BTN_LIGHT3          BITMAP  DISCARDABLE     "res\\Light3.bmp"
+IDB_BTN_RIGHT1          BITMAP  DISCARDABLE     "res\\Right1.bmp"
+IDB_BTN_RIGHT2          BITMAP  DISCARDABLE     "res\\Right2.bmp"
+IDB_BTN_RIGHT3          BITMAP  DISCARDABLE     "res\\Right3.bmp"
+IDB_BTN_RIGHTD1         BITMAP  DISCARDABLE     "res\\RightDown1.bmp"
+IDB_BTN_RIGHTD2         BITMAP  DISCARDABLE     "res\\RightDown2.bmp"
+IDB_BTN_RIGHTD3         BITMAP  DISCARDABLE     "res\\RightDown3.bmp"
+IDB_BTN_UP1             BITMAP  DISCARDABLE     "res\\Up1.bmp"
+IDB_BTN_UP2             BITMAP  DISCARDABLE     "res\\Up2.bmp"
+IDB_BTN_UP3             BITMAP  DISCARDABLE     "res\\Up3.bmp"
+IDB_BTN_UPR1            BITMAP  DISCARDABLE     "res\\UpRight1.bmp"
+IDB_BTN_UPR2            BITMAP  DISCARDABLE     "res\\UpRight2.bmp"
+IDB_BTN_UPR3            BITMAP  DISCARDABLE     "res\\UpRight3.bmp"
+IDB_BTN_WIPER1          BITMAP  DISCARDABLE     "res\\Wiper1.bmp"
+IDB_BTN_WIPER2          BITMAP  DISCARDABLE     "res\\Wiper2.bmp"
+IDB_BTN_WIPER3          BITMAP  DISCARDABLE     "res\\Wiper3.bmp"
+IDB_BTN_ZOOMIN1         BITMAP  DISCARDABLE     "res\\ZoomIn1.bmp"
+IDB_BTN_ZOOMIN2         BITMAP  DISCARDABLE     "res\\ZoomIn2.bmp"
+IDB_BTN_ZOOMIN3         BITMAP  DISCARDABLE     "res\\ZoomIn3.bmp"
+IDB_BTN_ZOOMO1          BITMAP  DISCARDABLE     "res\\ZoomOut1.bmp"
+IDB_BTN_ZOOMO2          BITMAP  DISCARDABLE     "res\\ZoomOut2.bmp"
+IDB_BTN_ZOOMO3          BITMAP  DISCARDABLE     "res\\ZoomOut3.bmp"
+IDB_BTN_3DPOS4          BITMAP  DISCARDABLE     "res\\3DPos4.bmp"
+IDB_BTN_AB1             BITMAP  DISCARDABLE     "res\\ApertureBig1.bmp"
+IDB_BTN_AB2             BITMAP  DISCARDABLE     "res\\ApertureBig2.bmp"
+IDB_BTN_AB3             BITMAP  DISCARDABLE     "res\\ApertureBig3.bmp"
+IDB_BTN_AB4             BITMAP  DISCARDABLE     "res\\ApertureBig4.bmp"
+IDB_BTN_AS4             BITMAP  DISCARDABLE     "res\\ApertureSmall4.bmp"
+IDB_BTN_DOWN4           BITMAP  DISCARDABLE     "res\\Down4.bmp"
+IDB_BTN_DOWNLEFT4       BITMAP  DISCARDABLE     "res\\DownLeft4.bmp"
+IDB_BTN_FOCALF4         BITMAP  DISCARDABLE     "res\\FocalFront4.bmp"
+IDB_BTN_LEFT4           BITMAP  DISCARDABLE     "res\\Left4.bmp"
+IDB_BTN_LEFTU4          BITMAP  DISCARDABLE     "res\\LeftUP4.bmp"
+IDB_BTN_LIGHT4          BITMAP  DISCARDABLE     "res\\Light4.bmp"
+IDB_BTN_RIGHT4          BITMAP  DISCARDABLE     "res\\Right4.bmp"
+IDB_BTN_RIGHTD4         BITMAP  DISCARDABLE     "res\\RightDown4.bmp"
+IDB_BTN_UP4             BITMAP  DISCARDABLE     "res\\Up4.bmp"
+IDB_BTN_UPR4            BITMAP  DISCARDABLE     "res\\UpRight4.bmp"
+IDB_BTN_WIPER4          BITMAP  DISCARDABLE     "res\\Wiper4.bmp"
+IDB_BTN_ZOOMIN4         BITMAP  DISCARDABLE     "res\\ZoomIn4.bmp"
+IDB_BTN_ZOOMO4          BITMAP  DISCARDABLE     "res\\ZoomOut4.bmp"
+IDB_BTN_LEFTR4          BITMAP  DISCARDABLE     "res\\LeftRight4.bmp"
+IDB_BTN_FOCALB4         BITMAP  DISCARDABLE     "res\\FocalBack4.bmp"
+IDB_BTN_CAPTURE1        BITMAP  DISCARDABLE     "res\\Capture1.bmp"
+IDB_BTN_CAPTURE2        BITMAP  DISCARDABLE     "res\\Capture2.bmp"
+IDB_BTN_CAPTURE3        BITMAP  DISCARDABLE     "res\\Capture3.bmp"
+IDB_BTN_PLAY1           BITMAP  DISCARDABLE     "res\\Play1.bmp"
+IDB_BTN_PLAY2           BITMAP  DISCARDABLE     "res\\Play2.bmp"
+IDB_BTN_PLAY3           BITMAP  DISCARDABLE     "res\\Play3.bmp"
+IDB_BTN_STOP1           BITMAP  DISCARDABLE     "res\\Stop1.bmp"
+IDB_BTN_STOP2           BITMAP  DISCARDABLE     "res\\Stop2.bmp"
+IDB_BTN_STOP3           BITMAP  DISCARDABLE     "res\\Stop3.bmp"
+IDB_BTN_STOPALL1        BITMAP  DISCARDABLE     "res\\StopAll1.bmp"
+IDB_BTN_STOPALL2        BITMAP  DISCARDABLE     "res\\StopAll2.bmp"
+IDB_BTN_STOPALL3        BITMAP  DISCARDABLE     "res\\StopAll3.bmp"
+IDB_BTN_RECORD1         BITMAP  DISCARDABLE     "res\\Record1.bmp"
+IDB_BTN_RECORD2         BITMAP  DISCARDABLE     "res\\Record2.bmp"
+IDB_BTN_RECORD3         BITMAP  DISCARDABLE     "res\\Record3.bmp"
+IDB_BTN_SOUND1          BITMAP  DISCARDABLE     "res\\Sound1.bmp"
+IDB_BTN_SOUND2          BITMAP  DISCARDABLE     "res\\Sound2.bmp"
+IDB_BTN_SOUND3          BITMAP  DISCARDABLE     "res\\Sound3.bmp"
+IDB_BTN_TALK1           BITMAP  DISCARDABLE     "res\\Talk1.bmp"
+IDB_BTN_TALK2           BITMAP  DISCARDABLE     "res\\Talk2.bmp"
+IDB_BTN_TALK3           BITMAP  DISCARDABLE     "res\\Talk3.bmp"
+IDB_BTN_CALLPRESET1     BITMAP  DISCARDABLE     "res\\CallPreset1.bmp"
+IDB_BTN_CALLPRESET2     BITMAP  DISCARDABLE     "res\\CallPreset2.bmp"
+IDB_BTN_CALLPRESET3     BITMAP  DISCARDABLE     "res\\CallPreset3.bmp"
+IDB_BTN_DELPRESET1      BITMAP  DISCARDABLE     "res\\DelPreset1.bmp"
+IDB_BTN_DELPRESET2      BITMAP  DISCARDABLE     "res\\DelPreset2.bmp"
+IDB_BTN_DELPRESET3      BITMAP  DISCARDABLE     "res\\DelPreset3.bmp"
+IDB_BTN_SETPRESET1      BITMAP  DISCARDABLE     "res\\SetPreset1.bmp"
+IDB_BTN_SETPRESET2      BITMAP  DISCARDABLE     "res\\SetPreset2.bmp"
+IDB_BTN_SETPRESET3      BITMAP  DISCARDABLE     "res\\SetPreset3.bmp"
+IDB_BTN_CRUISE_STOP1    BITMAP  DISCARDABLE     "res\\CruiseStop1.bmp"
+IDB_BTN_CRUISE_STOP2    BITMAP  DISCARDABLE     "res\\CruiseStop2.bmp"
+IDB_BTN_CRUISE_STOP3    BITMAP  DISCARDABLE     "res\\CruiseStop3.bmp"
+IDB_LBL_VPARM_TITLE     BITMAP  DISCARDABLE     "res\\VParamTitle.bmp"
+IDB_BTN_DEFAULT_VALUE1  BITMAP  DISCARDABLE     "res\\DefaultValue1.bmp"
+IDB_BTN_DEFAULT_VALUE2  BITMAP  DISCARDABLE     "res\\DefaultValue2.bmp"
+IDB_BTN_DEFAULT_VALUE3  BITMAP  DISCARDABLE     "res\\DefaultValue3.bmp"
+IDB_BTN_CLOSEVIDEO2     BITMAP  DISCARDABLE     "res\\CloseVideo2.bmp"
+IDB_BTN_CLOSEVIDEO1     BITMAP  DISCARDABLE     "res\\CloseVideo1.bmp"
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\HDNetVideoClient.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
